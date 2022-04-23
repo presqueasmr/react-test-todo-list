@@ -8,8 +8,9 @@ export default function Todo(props){
             <label className="toDoLabel" htmlFor={props.id}>{props.name}</label>
         </div>
         <div>
-             <button type='button'>Edit</button>
-             <button type="button">Delete</button>
+            <button type='button'>Edit</button>
+            <button type="button" className="btnDelete"
+            onClick={() => props.deleteTask(props.id)}>Delete</button>
         </div>
     </li>
     );
