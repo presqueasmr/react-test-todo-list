@@ -103,7 +103,7 @@ function App(props) {
           {taskList}
       </ul>
       <div className="btnDeleteAll">
-        <button type="button" /*onClick={() => props.deleteAllTasks(props.completed)}*/</div>>Supprimer toutes tâches finies</button>
+        <button type="button" /*onClick={() => .deleteAllTasks(.completed)}*/</div>>Supprimer toutes tâches finies</button>
       </div>
     </div>
 )
