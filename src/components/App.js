@@ -33,10 +33,13 @@ function App(props) {
     setTasks(remainingTasks);
   }
 
+/*-----------NONE FUNCTIONAL---------------
+
   function deleteAllTasks(completed){
     const unfinishedTasks = tasks.filter(task => completed !== task.completed);
     setTasks(unfinishedTasks);
   }
+  ----------------------------------------*/
 
   function editTask(id, newName) {
     const editedTaskList = tasks.map(task => {
