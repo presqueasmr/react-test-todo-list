@@ -11,14 +11,16 @@ function Form(props) {
     function handleSubmit(e) {
         e.preventDefault();
         props.addTask(name);
+        
         setName("");
     }
     return(
     <form onSubmit={handleSubmit}>
         <h2>Formulaire des tâches</h2>
-        <label className='formTitle'>A faire</label>
-        <input type="text" className="formInput" value={name} onChange={handleChange} />
-        <button type="submit" className='formBtn'>Ajouter une tâche</button>
+        <div className="formulaire">
+            <input type="text" className="formInput" value={name} onChange={handleChange} />
+            <button type="submit" className='formBtn'>Ajouter une tâche</button>
+        </div>
     </form>
     );
 }

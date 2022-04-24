@@ -16,46 +16,44 @@ export default function Todo(props){
     }
       
     const editingTemplate = (
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor={props.id}>
-              New name : 
-            </label>
-            <input id={props.id} type="text" value={newName} onChange={handleChange} />
-          </div>
-          <div className="btn-group">
-          <button type="button" className="btnCancel"
-            onClick={() => setEditing(false)}>
-            Cancel
-        </button>
+        <form className="editingView" onSubmit={handleSubmit}>
+            <div className="form-group">
+                <label htmlFor={props.id}>Modifier le nom : </label>
+                <input id={props.id} type="text" value={newName} onChange={handleChange} />
+            </div>
+            <div className="btn-group">
+                <button type="submit" className="btnEdit">
+                    Enregistrer
+                </button>
 
-            <button type="submit" className="btnEdit">
-              Save
-            </button>
-          </div>
+                <button type="button" className="btnDelete"
+                    onClick={() => setEditing(false)}>
+                    Annuler
+                </button>
+            </div>
         </form>
       );
 
       const viewTemplate = (
-        <div>
-          <div>
-              <input id={props.id} type="checkbox" defaultChecked={props.completed}
-              onChange={() => props.toggleTaskCompleted(props.id)}/>
-              <label htmlFor={props.id}>
-                {props.name}
-              </label>
+        <div className="containerTaskList">
+            <div className="taskTitle">
+                <input id={props.id} type="checkbox" defaultChecked={props.completed}
+                onChange={() => props.toggleTaskCompleted(props.id)}/>
+                <label htmlFor={props.id}>
+                    {props.name}
+                </label>
             </div>
             <div className="btn-group">
-            <button type="button" className="btnEdit" onClick={() => setEditing(true)}>
-            Edit 
-            </button>
+                <button type="button" className="btnEdit" onClick={() => setEditing(true)}>
+                    Modifier 
+                </button>
 
-              <button
-                type="button"
-                className="btnDelete"
-                onClick={() => props.deleteTask(props.id)}>
-                Delete
-              </button>
+                <button
+                    type="button"
+                    className="btnDelete"
+                    onClick={() => props.deleteTask(props.id)}>
+                    Supprimer
+                </button>
             </div>
         </div>
       );

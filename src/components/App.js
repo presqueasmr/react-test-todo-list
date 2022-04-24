@@ -33,6 +33,11 @@ function App(props) {
     setTasks(remainingTasks);
   }
 
+  function deleteAllTasks(completed){
+    const unfinishedTasks = tasks.filter(task => completed !== task.completed);
+    setTasks(unfinishedTasks);
+  }
+
   function editTask(id, newName) {
     const editedTaskList = tasks.map(task => {
       if (id === task.id) {
@@ -66,6 +71,7 @@ function App(props) {
       deleteTask={deleteTask}
       editTask={editTask}
       toggleTaskCompleted={toggleTaskCompleted}
+      deleteAllTasks={deleteAllTasks}
     />
   ));
 
@@ -82,11 +88,18 @@ function App(props) {
     <div className="toDoList">
       <h1>To Do List de Auriane</h1>
       <Form addTask={addTask} />
-      <h2>Liste des tâches</h2>
-      {filterList}
+      <h2 className="titleListTasks">Liste des tâches</h2>
+      <h3><b>Trier :</b></h3> 
+      <div className="filterButtons">
+        {filterList}
+      </div>
+      <span className="ligne"></span>
       <ul>
           {taskList}
       </ul>
+      <div className="btnDeleteAll">
+        <button type="button" onClick={() => props.deleteAllTasks(props.completed)}>Supprimer toutes tâches finies</button>
+      </div>
     </div>
 )
 }

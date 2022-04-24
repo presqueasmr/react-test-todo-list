@@ -1,1 +1,128 @@
+h1{
+    font-weight: 800;
+    font-style: italic;
+    text-align: center;
+}
 
+h2{
+    font-weight: 500;
+    margin: 50px;
+}
+
+h3{
+    margin-left: 75px;
+}
+
+.titleListTasks{
+    margin-bottom: 20px;
+
+}
+
+.formulaire{
+    display: flex;
+    justify-content: center;
+}
+
+.formInput{
+    margin-right: 20px;
+    width: 50%;
+    border-radius: 6px;
+    border-style: none;
+}
+
+button{
+    background-color: #FFD369;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover{
+    background-color: #e2a83d;
+}
+
+.filterButtons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    max-width: 847px;
+    
+}
+
+.filterBtn{
+    margin: 0 10px;
+    background-color: transparent;
+    border: #FFD369 solid 2px;
+    color: white;
+}
+
+.filterBtn:hover{
+    background-color: #ffd269 ;
+    color: black;
+}
+
+.formTitle{
+    padding: 0 20px
+}
+
+.containerTaskList{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+}
+
+.todo{
+    list-style: none;
+    
+}
+
+.taskTitle {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.taskTitle input {
+    margin-right: 20px;
+}
+
+.btn-group{
+    margin-bottom: 20px;
+}
+
+.btn-group button{
+    margin-right: 20px;
+}
+
+.btnDelete{
+    background-color: #F23737;
+}
+
+.btnDelete:hover{
+    background-color: #da2424;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.editingView{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+    font-size: 20px;
+}
+
+.btnDeleteAll{
+    display: flex;
+    justify-content: center;
+}
+
+.btnDeleteAll button{
+    background-color: #F23737;
+}
+
+.btnDeleteAll button:hover{
+    background-color: #da2424;
+}
